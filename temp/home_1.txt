@@ -1,0 +1,31 @@
+
+
+Item {
+  id: String
+  name : String
+  value: String
+  created: Date
+  index: Number
+}
+
+ItemDTO {
+  name : String
+  value: String
+  created: Date
+  index: Number
+}
+
+get /items?name= => [Item]
+get /items/:id => {Item}
+
+post /items (body ItemDTO)=> {Item} - Create new
+put /items/:id (body ItemDTO)=> {Item} - update exits
+
+delete /items/:id => {Item} - delete 
+
+const store = [];
+
+||
+
+const store = new Map();
+store[id] = Item
